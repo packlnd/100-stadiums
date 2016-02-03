@@ -1,18 +1,29 @@
 from flask import Flask, render_template, request,redirect
+import os
+import haml
+import haml.codegen
+import mako.lookup
 
 app = Flask(__name__)
+lookup = mako.lookup.TemplateLookup([os.path.dirname(__file__)],
+        preprocessor=haml.preprocessor
+)
+
+def render(html):
+    return lookup.get_template(html).render_unicode()
+
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render('templates/index.haml')
 
 @app.route('/udub')
 def udub():
-    return render_template('udub.html')
+    return render('templates/udub.html')
 
 @app.route('/osu')
 def osu():
-    return render_template('osu.html')
+    return render('templates/osu.html')
 
 if __name__ == "__main__":
     app.debug=True
