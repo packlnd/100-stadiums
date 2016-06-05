@@ -1,29 +1,18 @@
 from flask import Flask, render_template, request,redirect
+from stadium import get_stadium
 import os
-import haml
-import haml.codegen
-import mako.lookup
 
 app = Flask(__name__)
-lookup = mako.lookup.TemplateLookup([os.path.dirname(__file__)],
-        preprocessor=haml.preprocessor
-)
-
-def render(html):
-    return lookup.get_template(html).render_unicode()
-
 
 @app.route('/')
 def index():
-    return render('templates/index.haml')
+    return render_template('templates/index.html')
 
-@app.route('/udub')
-def udub():
-    return render('templates/udub.html')
-
-@app.route('/osu')
-def osu():
-    return render('templates/osu.html')
+@app.route('/stadium/<id>')
+def stadium(s_id):
+    raise NotImplementedError
+    stadium = get_stadium(s_id)
+    return render_templatle('templates/stadium.html', data=stadium)
 
 if __name__ == "__main__":
     app.debug=True
