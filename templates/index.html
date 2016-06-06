@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% macro show_stadium(stadium) %}
+  <img src="{{url_for('static', filename='images/'+stadium['img'])}}">
+{% endmacro %}
+{% block content %}
+  {% for stadium in data %}
+    <div id="{{stadium}}">
+      {{ show_stadium(data[stadium]) }}
+    </div>
+  {% endfor %}
+{% endblock %}

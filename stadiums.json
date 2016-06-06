@@ -1,0 +1,21 @@
+{
+  "husky_stadium":
+  {
+    "name": "Husky Stadium",
+    "capacity": 70083,
+    "coordinates": "",
+    "img": "uw.jpg",
+    "first_visit": "2015-09-10",
+    "school": "University of Washington",
+    "city": "Seattle, WA"
+  },
+  "reser_stadium": {
+    "name": "Reser Stadium",
+    "capacity": 45674,
+    "coordinates": "",
+    "img": "osu.jpg",
+    "first_visit": "2015-09-10",
+    "school": "Oregon State University",
+    "city": "Corvallis, OR"
+  }
+}
