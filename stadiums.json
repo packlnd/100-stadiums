@@ -2,7 +2,7 @@
   "husky_stadium":
   {
     "name": "Husky Stadium",
-    "capacity": 70083,
+    "capacity": "70,083",
     "coordinates": "",
     "img": "uw.jpg",
     "first_visit": "2015-09-10",
@@ -11,7 +11,7 @@
   },
   "reser_stadium": {
     "name": "Reser Stadium",
-    "capacity": 45674,
+    "capacity": "45,674",
     "coordinates": "",
     "img": "osu.jpg",
     "first_visit": "2015-09-10",
