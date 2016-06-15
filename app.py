@@ -9,7 +9,7 @@ stadiums = stadium.get_all_stadiums()
 def index():
     return render_template('index.html', data=stadiums)
 
-@app.route('/stadium/<id>')
+@app.route('/stadium/<s_id>')
 def stadium(s_id):
     return render_templatle('stadium.html', data=stadiums[s_id])
 
